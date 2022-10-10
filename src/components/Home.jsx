@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "../assets/hero-pic.jpg";
+import Quiz from "./Quiz";
+import { QuizContext } from "./Root";
 
 const Home = () => {
+  const quizType = useContext(QuizContext);
+  const quizzes = quizType.data;
   return (
     <div>
       <section>
@@ -14,19 +18,10 @@ const Home = () => {
             <p>Click the button to listen on Spotiwhy app.</p>
           </div>
         </div>
-        <section className="mt-14">
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+        <section className="m-14 grid md:grid-cols-4 gap-3">
+          {quizzes.map((quiz) => (
+            <Quiz key={quiz.id} quiz={quiz}></Quiz>
+          ))}
         </section>
       </section>
     </div>

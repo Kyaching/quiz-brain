@@ -7,6 +7,7 @@ import Statistics from "../components/Statistics";
 const router = createBrowserRouter([
   {
     path: "/",
+    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
     element: <Root></Root>,
     children: [
       {
