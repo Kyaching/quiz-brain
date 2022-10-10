@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 shadow-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,28 +27,30 @@ const Header = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <a href="#">Statistics</a>
+              <Link to="/statistics">Statistics</Link>
             </li>
             <li>
-              <a>Blogs</a>
+              <Link to="/blogs">Blogs</Link>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Quiz Brain</a>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          Quiz Brain
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex justify-end w-4/5">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Home</a>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <a href="#">Statistics</a>
+            <Link to="/statistics">Statistics</Link>
           </li>
           <li>
-            <a>Blogs</a>
+            <Link to="/blogs">Blogs</Link>
           </li>
         </ul>
       </div>
