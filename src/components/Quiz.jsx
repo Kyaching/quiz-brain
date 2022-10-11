@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const Quiz = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
   return (
-    <div className="card w-full bg-base-100 shadow-xl m-2">
+    <div className="card w-full bg-base-100 shadow-xl">
       <figure>
-        <img src={logo} alt="Shoes" />
+        <img className="bg-gray-900" src={logo} alt="brand Icons" />
       </figure>
       <div className="card-body">
-        <div className="flex items-center justify-between">
-          <h2 className="card-title w-1/2">{name}</h2>
-          <p>
-            <small className="w-1/2">Total Question: {total}</small>
+        <div className="flex justify-between">
+          <h2 className="card-title">{name}</h2>
+          <p className="flex-grow-0">
+            <small>Total Question: {total}</small>
           </p>
         </div>
         <div className="card-actions">

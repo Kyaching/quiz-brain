@@ -12,7 +12,6 @@ const QuizType = ({ name }) => {
           key={question.id}
           index={index}
           questions={question}
-          totalQuestions={questions}
         ></QuizQuestions>
       ))}
     </div>

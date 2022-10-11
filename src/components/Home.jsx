@@ -18,7 +18,7 @@ const Home = () => {
             <p>Click the button to listen on Spotiwhy app.</p>
           </div>
         </div>
-        <section className="m-14 grid md:grid-cols-4 gap-3">
+        <section className=" m-5 md:m-14 grid md:grid-cols-3 gap-3">
           {quizzes.map((quiz) => (
             <Quiz key={quiz.id} quiz={quiz}></Quiz>
           ))}
