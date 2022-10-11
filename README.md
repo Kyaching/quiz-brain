@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Project Name: Quiz Brain Project.
-Live site Link:
+## Project Name: `Quiz Brain` Project.
+
+## Live site Link: https://quiz-brain-react.netlify.app/
 
 ## Project Description
 
