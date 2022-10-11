@@ -1,20 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { QuestionContext } from "./Questions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-const QuizQuestions = ({ questions, totalQuestions }) => {
+const QuizQuestions = ({ questions, index }) => {
+  console.log(index);
   const { options, question, correctAnswer } = questions;
-
   const [isShown, setIsShown] = useState(false);
   const handleClick = () => {
     // 👇️ toggle shown state
     setIsShown((current) => !current);
-
-    // 👇️ or simply set it to true
-    // setIsShown(true);
   };
 
   const handleOptions = (selectOption) => {
@@ -41,7 +37,7 @@ const QuizQuestions = ({ questions, totalQuestions }) => {
     <div className="card w-full md:w-1/2 mx-auto m-4 bg-base-100 shadow-xl relative">
       <div className="card-body text-center">
         <h2 className="card-title justify-center">
-          Quiz {} : {question}
+          Quiz {index + 1}: {question}
         </h2>
         {options.map((option, index) => (
           <div

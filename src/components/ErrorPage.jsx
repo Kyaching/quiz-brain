@@ -5,7 +5,6 @@ import { useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
   const error = useRouteError();
-  console.log(error);
   return (
     <div className="m-4 flex items-center justify-center h-96">
       <div className="text-center">

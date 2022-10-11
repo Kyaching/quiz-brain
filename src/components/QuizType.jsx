@@ -7,9 +7,10 @@ const QuizType = ({ name }) => {
   return (
     <div>
       <h2 className="text-xl text-center font-bold">Quiz of {name}</h2>
-      {questions.map((question) => (
+      {questions.map((question, index) => (
         <QuizQuestions
           key={question.id}
+          index={index}
           questions={question}
           totalQuestions={questions}
         ></QuizQuestions>

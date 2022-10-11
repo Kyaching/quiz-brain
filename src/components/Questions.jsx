@@ -1,6 +1,5 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import QuizQuestions from "./QuizQuestions";
 import QuizType from "./QuizType";
 
 export const QuestionContext = createContext();
