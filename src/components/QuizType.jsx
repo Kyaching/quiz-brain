@@ -8,7 +8,11 @@ const QuizType = ({ name }) => {
     <div>
       <h2 className="text-xl text-center font-bold">Quiz of {name}</h2>
       {questions.map((question) => (
-        <QuizQuestions key={question.id} questions={question}></QuizQuestions>
+        <QuizQuestions
+          key={question.id}
+          questions={question}
+          totalQuestions={questions}
+        ></QuizQuestions>
       ))}
     </div>
   );

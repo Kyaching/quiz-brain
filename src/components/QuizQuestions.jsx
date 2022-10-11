@@ -5,12 +5,11 @@ import { QuestionContext } from "./Questions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-const QuizQuestions = ({ questions }) => {
+const QuizQuestions = ({ questions, totalQuestions }) => {
   const { options, question, correctAnswer } = questions;
 
   const [isShown, setIsShown] = useState(false);
-
-  const handleClick = (event) => {
+  const handleClick = () => {
     // 👇️ toggle shown state
     setIsShown((current) => !current);
 
@@ -42,7 +41,7 @@ const QuizQuestions = ({ questions }) => {
     <div className="card w-full md:w-1/2 mx-auto m-4 bg-base-100 shadow-xl relative">
       <div className="card-body text-center">
         <h2 className="card-title justify-center">
-          Quiz{} : {question}
+          Quiz {} : {question}
         </h2>
         {options.map((option, index) => (
           <div
