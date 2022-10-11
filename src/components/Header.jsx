@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -27,30 +27,37 @@ const Header = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/home">Home</Link>
+              <NavLink
+                to="/home"
+                className={({ isActive, isPending }) =>
+                  isActive ? "active" : isPending ? "pending" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/statistics">Statistics</Link>
+              <NavLink to="/statistics">Statistics</NavLink>
             </li>
             <li>
-              <Link to="/blogs">Blogs</Link>
+              <NavLink to="/blogs">Blogs</NavLink>
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <NavLink to="/" className="btn btn-ghost normal-case text-xl">
           Quiz Brain
-        </Link>
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex justify-end w-4/5">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <Link to="/home">Home</Link>
+            <NavLink to="/home">Home</NavLink>
           </li>
           <li>
-            <Link to="/statistics">Statistics</Link>
+            <NavLink to="/statistics">Statistics</NavLink>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <NavLink to="/blogs">Blogs</NavLink>
           </li>
         </ul>
       </div>

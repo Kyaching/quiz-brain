@@ -14,7 +14,7 @@ const Statistics = () => {
   const data = useContext(QuizContext);
   const totalData = data.data;
   return (
-    <div className="text-center">
+    <div className="text-center mt-10">
       <h2 className="font-bold text-2xl">Line Chart</h2>
       <ResponsiveContainer className="mx-auto mt-4" width="75%" height={400}>
         <LineChart data={totalData}>
