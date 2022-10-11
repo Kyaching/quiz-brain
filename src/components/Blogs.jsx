@@ -39,7 +39,7 @@ const Blogs = () => {
       </div>
       <div className="card md:w-2/4 mx-auto bg-base-100 shadow-xl mt-10">
         <div className="card-body">
-          <h2 className="card-title">Question 2: Works of useRef hook?</h2>
+          <h2 className="card-title">Question 3: Works of useRef hook?</h2>
           <p>
             The useRef Hook allows you to persist values between renders. It can
             be used to store a mutable value that does not cause a re-render
