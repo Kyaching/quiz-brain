@@ -15,4 +15,3 @@ const QuizType = ({ name }) => {
 };
 
 export default QuizType;
-<h2>Quiz of</h2>;
