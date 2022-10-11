@@ -19,25 +19,24 @@ const Statistics = () => {
   return (
     <div className="md:m-7 text-center">
       <h2 className="font-bold text-2xl">Line Chart</h2>
-      <ResponsiveContainer className="mx-auto mt-4" width={400} height="60%">
-        <LineChart
-          width={400}
-          height={300}
-          data={totalData}
-          // margin={{
-          //   top: 5,
-          //   right: 30,
-          //   left: 20,
-          //   bottom: 5,
-          // }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Line type="monotone" dataKey="total" stroke="#8884d8" />
-        </LineChart>
-      </ResponsiveContainer>
+      <LineChart
+        className="mx-auto mt-4"
+        width={400}
+        height={300}
+        data={totalData}
+        // margin={{
+        //   top: 5,
+        //   right: 30,
+        //   left: 20,
+        //   bottom: 5,
+        // }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Line type="monotone" dataKey="total" stroke="#8884d8" />
+      </LineChart>
       <p className="text-lg font-bold">Fig: Line Chart of Quiz</p>
     </div>
   );

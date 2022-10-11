@@ -7,7 +7,7 @@ const ErrorPage = () => {
   const error = useRouteError();
   console.log(error);
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="m-4 flex items-center justify-center h-96">
       <div className="text-center">
         <h1 className="text-4xl p-4">Oops!</h1>
         <FontAwesomeIcon
