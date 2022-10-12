@@ -29,7 +29,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className=" m-3 md:m-14 grid md:grid-cols-3 gap-3">
+      <div className=" m-3 md:m-14 grid md:grid-cols-2 lg:grid-cols-3 gap-3">
         {quizzes.map((quiz) => (
           <Quiz key={quiz.id} quiz={quiz}></Quiz>
         ))}
