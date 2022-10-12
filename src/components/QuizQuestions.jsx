@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-const QuizQuestions = ({ questions, index }) => {
-  console.log(index);
+const QuizQuestions = ({ questions, index, handleAnswer }) => {
   const { options, question, correctAnswer } = questions;
   const [isShown, setIsShown] = useState(false);
   const handleClick = () => {
@@ -19,17 +18,13 @@ const QuizQuestions = ({ questions, index }) => {
       toast.success("Correct answer!", {
         position: "top-center",
         autoClose: 500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
       });
+      handleAnswer(ans);
     } else {
       toast.error("Wrong Answer", {
         autoClose: 500,
       });
+      handleAnswer(false);
     }
   };
 
@@ -43,7 +38,7 @@ const QuizQuestions = ({ questions, index }) => {
           {options.map((option, index) => (
             <div
               key={index}
-              className=" w-full md:w-4/5 mx-auto border-2 p-6 hover:border-sky-600"
+              className="w-full md:w-4/5 mx-auto border-2 p-6 hover:border-blue-600"
             >
               <label className="radio flex flex-initial w-full rounded-none border-0">
                 <input
@@ -59,7 +54,7 @@ const QuizQuestions = ({ questions, index }) => {
         <FontAwesomeIcon
           onClick={handleClick}
           className="absolute right-0 p-4 cursor-pointer"
-          icon={faEye}
+          icon={isShown ? faEyeSlash : faEye}
         />
         {isShown && (
           <p className="p-4 text-lg text-success">
